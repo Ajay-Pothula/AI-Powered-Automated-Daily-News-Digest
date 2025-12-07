@@ -9,11 +9,11 @@ import datetime
 
 # --- IMPORTANT: PASTE YOUR NEW SECRETS HERE ---
 # 1. Create a NEW API Key and paste it here
-GOOGLE_API_KEY = "AIzaSyBriKnuIloYXW7ByzYPm0BZmQndhlj5C9Q"
+GOOGLE_API_KEY = "API_KEY"
 # 2. Create a NEW App Password and paste it here
-SENDER_EMAIL = "pothulaajay3@gmail.com"  # Your Gmail address
-RECEIVER_EMAIL = "ajaypothula125@gmail.com" # The email you want to send to
-APP_PASSWORD = "rohq vmyu xdqx msxq"
+SENDER_EMAIL = "@gmail.com"  # Your Gmail address
+RECEIVER_EMAIL = "@gmail.com" # The email you want to send to
+APP_PASSWORD = "xxxx xxxx xxxx xxxx"
 
 # --- Helper function to get article text ---
 def get_article_text(url):
@@ -134,4 +134,5 @@ else:
         except Exception as e:
             print(f"An error occurred with the Gemini API: {e}")
     else:
+
         print("Could not retrieve enough text from the article to summarize.")
