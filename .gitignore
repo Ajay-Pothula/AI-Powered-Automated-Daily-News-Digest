@@ -1,0 +1,8 @@
+﻿venv/
+__pycache__/
+*.pyc
+.env
+.vscode/
+.idea/
+# If you don't want to commit sent.json (recommended for public repos) uncomment next line:
+# sent.json
