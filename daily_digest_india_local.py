@@ -88,10 +88,10 @@ MIN_ARTICLE_LENGTH = int(os.environ.get("MIN_ARTICLE_LENGTH", "150"))
 
 DRY_RUN = os.environ.get("DRY_RUN", "false").lower() == "true"
 
-GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "AIzaSyBriKnuIloYXW7ByzYPm0BZmQndhlj5C9Q").strip()
-SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "pothulaajay3@gmail.com").strip()
-RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "ajaypothula125@gmail.com").strip()
-APP_PASSWORD = os.environ.get("APP_PASSWORD", "rohq vmyu xdqx msxq").strip()
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY", "API_KEY").strip()
+SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "sender@gmail.com").strip()
+RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "receiver@gmail.com").strip()
+APP_PASSWORD = os.environ.get("APP_PASSWORD", "xxxx xxxx xxxx xxxx").strip()
 
 PERSIST_SENT = os.environ.get("PERSIST_SENT", "true").lower() == "true"
 SENT_FILE = os.environ.get("SENT_FILE", "sent.json")
@@ -171,7 +171,7 @@ def summarize(title: str, text: str) -> str:
     if GOOGLE_API_KEY and GEMINI_AVAILABLE:
         try:
             genai.configure(api_key=GOOGLE_API_KEY)
-            model = genai.GenerativeModel("gemini-1.5-flash-latest")
+            model = genai.GenerativeModel("gemini-1.5-flash-latest") #Or any model which you wish to keep
             prompt = (
                 "You are a concise, factual summarizer. Output:\n"
                 "- One short headline (one line)\n"
@@ -341,3 +341,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
